@@ -1,0 +1,25 @@
+using System;
+using System.Windows.Forms;
+using System.Media;
+
+public partial class Form1 : Form
+{
+    private SoundPlayer player;
+
+    public Form1()
+    {
+        InitializeComponent();
+        player = new SoundPlayer();
+    }
+
+    private void buttonPlay_Click(object sender, EventArgs e)
+    {
+        player.SoundLocation = @"C:\path\to\your\audio\file.wav";
+        player.Play();
+    }
+
+    private void buttonStop_Click(object sender, EventArgs e)
+    {
+        player.Stop();
+    }
+}
